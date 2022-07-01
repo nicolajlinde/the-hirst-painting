@@ -35,7 +35,8 @@ dot.penup()
 
 x = 0
 y = 0
-gap = 40
+dot_gap = 40
+dot_size = 20
 
 for i in range(10):
     dot.setx(x)
@@ -43,11 +44,11 @@ for i in range(10):
 
     for c in range(10):
         dot.pendown()
-        dot.dot(15, change_color())
+        dot.dot(dot_size, change_color())
         dot.penup()
-        dot.forward(gap)
+        dot.forward(dot_gap)
 
-    y += gap
+    y += dot_gap
 
 screen = dot.Screen()
 screen.exitonclick()
